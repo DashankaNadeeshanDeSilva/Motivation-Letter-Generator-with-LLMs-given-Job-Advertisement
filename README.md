@@ -16,7 +16,7 @@ The project mainly uses a Streamlit user interface application, where user can e
 ### How to use
 
 1. Intsall the required dependencies using ```requirements.txt``` file.
-2. Get an API key from [text](https://console.groq.com/keys.) and place is under `src/.env` under `API_KEY`.
+2. Get an API key from [here](https://console.groq.com/keys.) and place is under `src/.env` under `API_KEY`.
 3. Change directory to `src` and run the Streamlit application by running
     ```commandline
     streamlit run app.py
