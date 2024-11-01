@@ -20,16 +20,16 @@ class Job_info:
         ### INSTRUCTION:
         The scraped text is from the career's page of a website.
         Your job is to extract the job postings and return them in JSON format containing the 
-        following keys: `role`, `experience`, `skills` and `description`.
+        following keys: 'role', 'experience', 'skills' and 'description'.
         Only return the valid JSON. 
-        Also only take the job (prominant) that has most information on `role`, `experience`, `skills` and `description` for the final json.
+        Also only take the job (prominant) that has most information on 'role', 'experience', 'skills' and 'description' for the final json.
 
         ### VALID JSON (NO PREAMBLE):    
         """
         )
 
     def get_job(self, job_link):
-        # scrape job info frpm website
+        ''' scrape job info from website'''
         loader = WebBaseLoader(job_link)
         page_data = loader.load().pop().page_content 
         
