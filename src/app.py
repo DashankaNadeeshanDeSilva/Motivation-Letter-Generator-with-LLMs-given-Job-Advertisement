@@ -2,28 +2,32 @@ import streamlit as st
 from generate_cover_letter import generate_cover_letter
 from get_cv_content import extract_text_from_cv
 
-def app():
+def app() -> None:
+    """Main application for cover letter generation"""
     st.title('Cover Letter Generator')
-    # inputs
-    job_post_link = st.text_input('Enter job URL: ', value=None)
 
-    # PDF File uploader
+    job_post_link = st.text_input('Enter job URL: ', value=None)
     uploaded_file = st.file_uploader("Upload you CV (pdf only)", type=['pdf'])
+
     if uploaded_file is not None:
         st.success('File successfully uploaded!')
 
-    submit_button = st.button("Submit and Generate")
-
-    if submit_button:
+    if st.button("Submit and Generate"):
+        if not job_post_link or uploaded_file is None:
+            st.error("Please provide both a job URL and upload your CV.")
+            return
+        
         try:
-            #st.write(f"You submitted the URL: {job_post_link}")
             extracted_text = extract_text_from_cv(uploaded_file)
             cover_letter = generate_cover_letter(job_post_link, extracted_text)
-
             #st.code(motivation_letter, language='markdown')
             st.write(cover_letter)
-            # write the letter to pdf doc and make it downloadable
-    
+
+        # Exception handling
+        except FileNotFoundError:
+            st.error("The upladed file cannot be found")
+        except ValueError as value_error:
+            st.error(f"Value error: {value_error}")
         except Exception as error:
             st.error(f"Error Occurred {error}")
 

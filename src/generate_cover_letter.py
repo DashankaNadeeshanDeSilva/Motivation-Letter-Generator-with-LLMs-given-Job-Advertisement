@@ -4,7 +4,6 @@ from langchain_community.document_loaders import WebBaseLoader
 from langchain_core.prompts import PromptTemplate
 from dotenv import load_dotenv
 import os
-from langchain_core.output_parsers import JsonOutputParser
 
 from get_cv_content import get_cv
 from get_job_content import Job_info
@@ -21,7 +20,7 @@ def get_job_info(job_link, llm):
 
 
 def generate_cover_letter(job_link, cv_text):
-
+    '''Generate Cover letter based on provided job URL and CV document'''
     llm = ChatGroq(temperature=0, api_key=os.getenv("API_KEY"), model_name="llama-3.1-70b-versatile")
     job_info = get_job_info(job_link, llm)
 

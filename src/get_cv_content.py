@@ -16,6 +16,7 @@ def get_cv(cv_dir):
     return cv
 
 def extract_text_from_cv(uploaded_file):
+    '''Extract text from uploaded CV pdf'''
     if uploaded_file is not None:
         # Extract text from the uploaded PDF file using PyPDF2
         # Convert the uploaded file to a BytesIO object
