@@ -3,14 +3,14 @@
 This project focuses on LLM based GenAI application to generate Motivation Letters for given Job Advertisements and CV. 
 
 ### Motivation: 
-When applying to a job, it is common to submit a cover letter explaining why the candidate is intrested in this role outlining their experience, skills, knowledge and eductaion. However, it is also bit of work, where it can leverage LLMs to help with creating one according to the job advertisement and CV.
+When applying to a job, it is common to submit a cover letter explaining why the candidate is interested in this role and outlining their experience, skills, knowledge, and education. However, it is also a bit of work, and LLMs can help with creating one according to the job advertisement and CV.
 
 ### Method:
-The project mainly uses a Streamlit user interface application, where user can enter job adverstisement and CV, then generates a cover letter using an LLM with both inputs. The project uses Groq and Langchanin frameworks in the backend to handle and process data and LLMs. The following flow diagrams explains the system architecture.
+The project mainly uses a Streamlit user interface application, where users can enter job advertisements and CVs. The application then generates a cover letter using an LLM with both inputs. The project uses Groq and Langchanin frameworks in the backend to handle and process data and LLMs. The following flow diagrams explain the system architecture.
 
 ![motivation_letter_gen_project_system_archi.jpg](image/motivation_letter_gen_project_system_archi.jpg)
 
-* This project utilizes `llama-3.1-70b-versatile` LLM model that is deployed in Groq (cloud) via api-key.
+* This project utilizes `llama-3.1-70b-versatile` LLM model deployed in Groq (cloud server) via api-key.
 * Langchain framework to process data including invoking LLM with prompts, web scraping (to get job post) and process data.
 
 ### How to use
