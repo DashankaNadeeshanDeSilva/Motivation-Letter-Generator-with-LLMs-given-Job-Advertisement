@@ -21,7 +21,7 @@ def get_job_info(job_link, llm):
 
 def generate_cover_letter(job_link, cv_text):
     '''Generate Cover letter based on provided job URL and CV document'''
-    llm = ChatGroq(temperature=0, api_key=os.getenv("API_KEY"), model_name="llama-3.1-70b-versatile")
+    llm = ChatGroq(temperature=0, api_key=os.getenv("API_KEY"), model_name="gemma2-9b-it")
     job_info = get_job_info(job_link, llm)
 
     # Write a prompt that create a cover letter for a given job based on my previous cover letters and CV
