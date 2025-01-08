@@ -1,4 +1,4 @@
-## Motivation-Letter-Generator-with-LLMs-given-Job-Advertisement
+## Motivation letter generator with LLMs given CV and job advertisement
 
 This project focuses on LLM based GenAI application to generate Motivation Letters for given Job Advertisements and CV. 
 
