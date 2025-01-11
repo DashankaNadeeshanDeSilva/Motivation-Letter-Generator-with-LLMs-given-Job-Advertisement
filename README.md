@@ -8,7 +8,7 @@ When applying to a job, it is common to submit a cover letter explaining why the
 ### Method:
 The project mainly uses a Streamlit user interface application, where users can enter job advertisements and CVs. The application then generates a cover letter using an LLM with both inputs. The project uses Groq and Langchanin frameworks in the backend to handle and process data and LLMs. The following flow diagrams explain the system architecture.
 
-![motivation_letter_gen_project_system_archi.jpg](image/motivation_letter_gen_project_system_archi.jpg)
+![motivation_letter_gen_project_system_archi.jpg](resources/motivation_letter_gen_project_system_archi.jpg)
 
 * This project utilizes `llama-3.1-70b-versatile` LLM model deployed in Groq (cloud server) via api-key.
 * Langchain framework to process data including invoking LLM with prompts, web scraping (to get job post) and process data.
